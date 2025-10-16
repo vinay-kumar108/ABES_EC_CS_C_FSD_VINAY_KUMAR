@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        /* adding neon styling*/
+        body {
+            background-color: #000;
+            color: #0ff;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding: 50px;
+        }
+        header {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+        }
+        input[type="number"] {
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid #0ff;
+            border-radius: 5px;
+            background-color: #000;
+            color: #0ff;
+            font-size: 1em;
+            text-align: center;
+        }
+        input[type="button"] {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0ff;
+            color: #000;
+            font-size: 1em;
+            cursor: pointer;
+            box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+        } 
+        input[type="button"]:hover {
+            background-color: #0cc;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 1.5em;
+            text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+        }
+        #error {
+            color: red;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header name="container">Calculator</header>
+    <main>
+        <span id="error" ></span>
+        <br><br>
+        <label for="num1">Input1</label>
+        <input type="number" name="num1" id="num1"><br>
+        <label for="num2">Input2</label>
+        <input type="number" name="num2" id="num2"><br>
+        <div id="output"></div><br>
+        <input type="button" value="ADD" onclick="add()">
+        <input type="button" value="SUB" onclick="sub()">
+        <input type="button" value="MUL" onclick="mul()">
+        <input type="button" value="DIV" onclick="div()">
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
