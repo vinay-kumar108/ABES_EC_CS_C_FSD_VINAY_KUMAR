@@ -4,42 +4,39 @@ const output = document.getElementById("output");
 const error = document.getElementById("error");
 
 function add() {
-    if (num1.value === "" || num2.value === "") {
-        error.innerText = 'Please enter both the numbers';
-        output.innerText = "";
-        return;
-    }
-        const op = parseFloat(num1.value) + parseFloat(num2.value);
-        output.innerText = op;
-    
+  if (num1.value === "" || num2.value === "") {
+    error.innerText = "Please enter both the numbers";
+    output.innerText = "";
+    return;
+  }
+  const op = parseFloat(num1.value) + parseFloat(num2.value);
+  output.innerText = op;
 }
 function sub() {
-     if (num1.value === "" || num2.value === "") {
-        error.innerText = 'Please enter both the numbers';
-        output.innerText = "";
-        return;
-    } 
-       const op = parseFloat(num1.value) - parseFloat(num2.value);
-        output.innerText = op;
-    
+  if (num1.value === "" || num2.value === "") {
+    error.innerText = "Please enter both the numbers";
+    output.innerText = "";
+    return;
+  }
+  const op = parseFloat(num1.value) - parseFloat(num2.value);
+  output.innerText = op;
 }
 function mul() {
-     if (num1.value === "" || num2.value === "") {
-        error.innerText = 'Please enter both the numbers';
-        output.innerText = "";
-    }    
-    const op = parseFloat(num1.value) * parseFloat(num2.value);
-        output.innerText = op;
-    
+  if (num1.value === "" || num2.value === "") {
+    error.innerText = "Please enter both the numbers";
+    output.innerText = "";
+    return;
+  }
+  const op = parseFloat(num1.value) * parseFloat(num2.value);
+  output.innerText = op;
 }
 function div() {
-     if (num1.value === "" || num2.value === "") {
-        error.innerText = 'Please enter both the numbers';
-    
-        output.innerText = "";
-        return;
-    }
-        const op = parseFloat(num1.value) / parseFloat(num2.value);
-        output.innerText = op;
-    
+  if (num1.value === "" || num2.value === "") {
+    error.innerText = "Please enter both the numbers";
+
+    output.innerText = "";
+    return;
+  }
+  const op = parseFloat(num1.value) / parseFloat(num2.value);
+  output.innerText = op;
 }

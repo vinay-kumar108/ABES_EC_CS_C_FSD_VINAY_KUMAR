@@ -6,54 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <style>
-        /* adding neon styling*/
-        body {
-            background-color: #000;
-            color: #0ff;
-            font-family: 'Courier New', Courier, monospace;
-            text-align: center;
-            padding: 50px;
-        }
-        header {
-            font-size: 2em;
-            margin-bottom: 20px;
-            text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
-        }
-        input[type="number"] {
-            padding: 10px;
-            margin: 10px;
-            border: 2px solid #0ff;
-            border-radius: 5px;
-            background-color: #000;
-            color: #0ff;
-            font-size: 1em;
-            text-align: center;
-        }
-        input[type="button"] {
-            padding: 10px 20px;
-            margin: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #0ff;
-            color: #000;
-            font-size: 1em;
-            cursor: pointer;
-            box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
-        } 
-        input[type="button"]:hover {
-            background-color: #0cc;
-        }
-        #output {
-            margin-top: 20px;
-            font-size: 1.5em;
-            text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
-        }
-        #error {
-            color: red;
-            font-weight: bold;
-        }
+    /* Softer neon theme */
+    body {
+        background: radial-gradient(circle at top, #0a0a0f, #000);
+        color: #e0f7fa;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        padding: 50px;
+    }
 
-    </style>
+    header {
+        font-size: 2.5em;
+        margin-bottom: 25px;
+        color: #00e5ff;
+        text-shadow: 0 0 5px #00e5ff, 0 0 10px #00bcd4, 0 0 20px #0097a7;
+        letter-spacing: 2px;
+    }
+
+    input[type="number"] {
+        padding: 12px;
+        margin: 10px;
+        border: 2px solid #00bcd4;
+        border-radius: 8px;
+        background-color: #111;
+        color: #b2ebf2;
+        font-size: 1.1em;
+        text-align: center;
+        box-shadow: 0 0 5px rgba(0, 188, 212, 0.4);
+        transition: all 0.3s ease;
+    }
+
+    input[type="number"]:focus {
+        outline: none;
+        box-shadow: 0 0 10px #00e5ff, 0 0 20px #00bcd4;
+    }
+
+    input[type="button"] {
+        padding: 12px 25px;
+        margin: 10px;
+        border: none;
+        border-radius: 8px;
+        background-color: #00e5ff;
+        color: #000;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 0 8px #00e5ff, 0 0 15px #00bcd4;
+    }
+
+    input[type="button"]:hover {
+        background-color: #26c6da;
+        box-shadow: 0 0 12px #00e5ff, 0 0 25px #00bcd4;
+    }
+
+    #output {
+        margin-top: 25px;
+        font-size: 1.5em;
+        color: #80deea;
+        text-shadow: 0 0 5px #00e5ff, 0 0 10px #00bcd4;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #error {
+        color: #ff6b6b;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    /* Optional flicker animation for header */
+    @keyframes glowPulse {
+        0% { text-shadow: 0 0 5px #00e5ff, 0 0 10px #00bcd4; }
+        50% { text-shadow: 0 0 15px #00e5ff, 0 0 30px #00bcd4; }
+        100% { text-shadow: 0 0 5px #00e5ff, 0 0 10px #00bcd4; }
+    }
+
+    header {
+        animation: glowPulse 2.5s infinite;
+    }
+</style>
+
 </head>
 
 <body>
